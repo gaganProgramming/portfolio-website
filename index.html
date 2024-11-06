@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="./background1.webp" type="image/png">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-10 top-0">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#home" class="text-2xl font-bold text-gray-800">My Portfolio</a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="#about" class="text-gray-600 hover:text-blue-500">About</a>
+      <a href="#portfolio" class="text-gray-600 hover:text-blue-500">Portfolio</a>
+      <a href="#experience" class="text-gray-600 hover:text-blue-500">Experience</a>
+      <a href="#blog" class="text-gray-600 hover:text-blue-500">Blog</a>
+      <a href="#reach-me" class="text-gray-600 hover:text-blue-500">Contact</a>
+      <a href="./Gagan_S_Resume.pdf" class="bg-blue-500 text-white px-3 py-1 rounded-full mr-2">Resume</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+    <a href="#about" class="block py-2 text-gray-600 hover:text-blue-500">About</a>
+    <a href="#portfolio" class="block py-2 text-gray-600 hover:text-blue-500">Portfolio</a>
+    <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-500">Experience</a>
+    <a href="#blog" class="block py-2 text-gray-600 hover:text-blue-500">Blog</a>
+    <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-500">Contact</a>
+    <a href="./Gagan_S_Resume.pdf" class="bg-blue-500 text-white px-3 py-1 rounded-full mr-2">Resume</a>
+  </div>
+</nav>
+
+
+
+
+ 
+    <!-- Homepage Section -->
+<!-- Hero Section with Background Cover Image -->
+<section id="home" class="h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat px-4" style="background-image: url('./background1.webp');">
+  <div class="bg-white bg-opacity-100 rounded-lg p-8 text-center max-w-md mx-auto">
+    <!-- Profile Image -->
+    <img src="./profile-photo.jpg" alt="Gagan S" class="w-32 h-32 rounded-full mx-auto mb-4">
+    <!-- Name and Title -->
+    <h1 class="text-3xl sm:text-4xl font-bold mb-2">Hello, I'm Gagan S</h1>
+    <p class="text-lg sm:text-xl text-gray-700 mb-4">Web Developer | MERN Stack Enthusiast</p>
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#about" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">
+        Learn More
+      </a>
+      <a href="#reach-me" class="bg-transparent border border-gray-500 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition">
+        Contact Me
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+      <!-- About Me Section -->
+      <section id="about" class="py-16 bg-gray-100 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-semibold mb-6">About Me</h2>
+          <p class="text-lg mb-4">Hello! I'm Gagan, a passionate web developer. I specialize in creating dynamic and responsive websites using modern web technologies. With a strong foundation in HTML, CSS, JavaScript, and the MERN stack, I enjoy building user-friendly applications that solve real-world problems.</p>
+          <p class="text-lg mb-4">I graduated from Sambhram Institute of technologies, where I developed a keen interest in web development. I've worked in honing my skills in full-stack development. I thrive in collaborative environments and love tackling challenging projects.</p>
+          <h4 class="text-xl font-semibold mb-2">Skills</h4>
+          <p class="text-lg mb-4">My skills include JavaScript, React, Node.js, MongoDB, and Tailwind CSS, among others. I am constantly exploring new technologies and tools to enhance my development skills. In my free time, I enjoy contributing to open-source projects, writing tech blogs, and keeping up with the latest trends in the tech world.</p>
+          <p class="text-lg mb-4"> I'm a firm believer in lifelong learning and love to connect with fellow developers and tech enthusiasts.</p>
+        </div>
+      </section>
+
+<!-- Portfolio / Projects Section --> 
+<section id="portfolio" class="py-16 bg-white">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-6">Portfolio</h2>
+
+    <!-- Project Cards Wrapper -->
+    <div class="relative overflow-hidden w-full">
+      <div id="cards-container" class="flex transition-transform duration-300 gap-6">
+        
+        <!-- Card 1: Move It -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 flex-shrink-0">
+          <img src="./moveit.png" alt="Move It" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h5 class="text-2xl font-semibold mb-2">Move It</h5>
+          <p class="mb-4">An e-commerce website created with Bootstrap, showcasing responsive layout and design skill.</p>
+          <div>
+            <a href="https://github.com/gaganProgramming/Move-It" class="bg-blue-500 text-white px-3 py-1 rounded-full mr-2" target="_blank">GitHub</a>
+            <a href="https://gaganprogramming.github.io/Move-It/" class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Tindog -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 flex-shrink-0">
+          <img src="./Tindog.png" alt="Tindog" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h5 class="text-2xl font-semibold mb-2">Tindog</h5>
+          <p class="mb-4">A social media platform for dogs, inspired by popular dating apps, responsive layout using Bootstrap.</p>
+          <div>
+            <a href="https://github.com/gaganProgramming/tinDogWebsite" class="bg-blue-500 text-white px-3 py-1 rounded-full mr-2" target="_blank">GitHub</a>
+            <a href="https://gaganprogramming.github.io/tinDogWebsite/" class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Drum Kit -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 flex-shrink-0">
+          <img src="./drumkit.png" alt="Drum Kit" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h5 class="text-2xl font-semibold mb-2">Drum Kit</h5>
+          <p class="mb-4">A fun web app where users play drum sounds by pressing keys or clicking icons, built with JavaScript.</p>
+          <div>
+            <a href="https://github.com/gaganProgramming/drumKit" class="bg-blue-500 text-white px-3 py-1 rounded-full mr-2" target="_blank">GitHub</a>
+            <a href="https://gaganprogramming.github.io/drumKit/" class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Todo List -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 flex-shrink-0">
+          <img src="./todo.png" alt="Todo List" class="w-full h-48 object-cover rounded-lg mb-4">
+          <h5 class="text-2xl font-semibold mb-2">Todo List</h5>
+          <p class="mb-4">An interactive React-based app for adding and removing tasks with ease.</p>
+          <div>
+            <a href="https://github.com/gaganProgramming/toDoList" class="bg-blue-500 text-white px-3 py-1 rounded-full mr-2" target="_blank">GitHub</a>
+            <a href="https://gaganprogramming.github.io/toDoList/" class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="flex justify-between mt-6 space-x-4">
+      <button id="prevButton" class="bg-gray-700 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-gray-600 text-sm md:text-base">Prev</button>
+      <button id="nextButton" class="bg-gray-700 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-gray-600 text-sm md:text-base">Next</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+      
+      
+      <!-- Experience Section -->
+      <section id="experience" class="py-16 bg-gray-100 text-center">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-semibold mb-6">Experience</h2>
+          <div class="space-y-8">
+            <div>
+              <h4 class="text-xl font-semibold">BatterMami Private Limited - Web Developer</h4>
+              <p>Worked on full-stack development, focusing on MERN stack projects.</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold">Horizon - Software Engineer Intern</h4>
+              <p>Created websites using HTML, CSS, JavaScript and gained experience in testing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+   <!-- Blog / Articles Section -->
+<section id="blog" class="py-16 bg-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6">Blog</h2>
+      <div class="space-y-6">
+        <!-- Article 1 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h5 class="text-2xl font-semibold mb-2">5 Tips for Getting Started with React</h5>
+          <p class="mb-4">React has become one of the most popular JavaScript libraries for building user interfaces. In this article, I share five essential tips to help beginners start their journey with React and make the most out of this powerful tool.</p>
+          <a href="https://yourblog.com/getting-started-with-react" class="text-blue-500 hover:underline" target="_blank">Read More</a>
+        </div>
+  
+        <!-- Article 2 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h5 class="text-2xl font-semibold mb-2">Understanding the MERN Stack: A Beginner's Guide</h5>
+          <p class="mb-4">The MERN stack is a popular set of technologies for building full-stack web applications. This article breaks down the components of the MERN stack and explains how they work together to create dynamic web experiences.</p>
+          <a href="https://yourblog.com/mern-stack-guide" class="text-blue-500 hover:underline" target="_blank">Read More</a>
+        </div>
+  
+        <!-- Article 3 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h5 class="text-2xl font-semibold mb-2">CSS Flexbox vs. Grid: Which One Should You Use?</h5>
+          <p class="mb-4">Flexbox and Grid are two powerful CSS layout models, each with its own strengths. In this article, I compare the two and offer guidance on when to use each layout method in your projects.</p>
+          <a href="https://yourblog.com/css-flexbox-vs-grid" class="text-blue-500 hover:underline" target="_blank">Read More</a>
+        </div>
+        
+        <!-- Article 4 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h5 class="text-2xl font-semibold mb-2">The Importance of Responsive Design</h5>
+          <p class="mb-4">In today's mobile-first world, responsive design is crucial for web development. This article discusses the principles of responsive design and how to implement them in your projects to enhance user experience.</p>
+          <a href="https://yourblog.com/responsive-design-importance" class="text-blue-500 hover:underline" target="_blank">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Reach Me Section -->
+    
+
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    
+        <section id = "reach-me" class="text-center p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Reach Me</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+    
+                <!-- Email Card -->
+                <div class="contact-card flex flex-col items-center p-6 w-48 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-10 h-10 text-blue-500 mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M502.3 190.8L327.4 338.1c-15.9 13.8-39.9 13.8-55.8 0L9.7 190.8C-3.1 179.7-4.7 160.3 6.5 147.5s30.5-14.3 43.3-3.2L256 307.4l206.2-163.1c12.8-10.5 32.3-8.9 43.3 3.2s8.9 32.3-3.2 43.3zM512 448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V256l168.5 130.7c24.6 19.1 56.2 28.8 87.5 28.8s63-9.6 87.5-28.8L512 256v192z"/>
+                    </svg>
+                    <a href="mailto:gagan.0191@gmail.com" class="text-blue-600 text-sm font-medium">gagan.0191@gmail.com</a>
+                </div>
+    
+                <!-- Phone Card -->
+                <div class="contact-card flex flex-col items-center p-6 w-48 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-10 h-10 text-green-500 mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M511.1 387.6c0 26.4-21.6 47.9-48 47.9c-67.4 0-132.6-16.5-191.3-49.7C205.8 354.3 156 304.4 126.1 243.3C95.6 182.1 82.3 115.4 82.3 48c0-26.5 21.5-48 47.9-48h55.7c26.4 0 47.9 21.5 47.9 48c0 23.8 5.1 46.9 15.2 68c3.5 7.3 1.9 16.1-4.2 21.8L205.3 200c22.8 51.5 63.8 92.4 115.3 115.3l61.2-61.2c5.9-5.9 14.7-7.5 21.8-4.2c21.1 10.1 44.3 15.2 68 15.2c26.4 0 47.9 21.5 47.9 47.9v55.6z"/>
+                    </svg>
+                    <a href="tel:+919008962068" class="text-green-600 text-sm font-medium">+91 9008962068</a>
+                </div>
+    
+                <!-- LinkedIn Card -->
+                <div class="contact-card flex flex-col items-center p-6 w-48 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-10 h-10 text-blue-700 mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M100.3 448H7V148.9h93.2V448zM53.7 108.1c-30.2 0-54.6-24.4-54.6-54.6S23.5 0 53.7 0s54.6 24.4 54.6 54.6s-24.5 53.5-54.6 53.5zM447.1 448h-92.6V304.8c0-34.1-12.2-57.4-42.9-57.4c-23.4 0-37.2 15.8-43.3 31.1c-2.2 5.4-2.8 13-2.8 20.6V448H174.5c1.2-267.8 0-299.1 0-299.1h92.6V188c12.3-19 34.3-46 83.6-46c61 0 106.4 39.9 106.4 125.5V448z"/>
+                    </svg>
+                    <a href="https://www.linkedin.com/in/gagan-suresh" target="_blank" class="text-blue-700 text-sm font-medium">LinkedIn Profile</a>
+                </div>
+    
+                <!-- GitHub Card -->
+                <div class="contact-card flex flex-col items-center p-6 w-48 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="w-10 h-10 text-gray-800 mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path d="M165.9 397.4c0 2-2.3 4.3-5.1 4.3c-2.8 .3-5.1-1.7-5.1-3.7c0-2.1 2.3-4.3 5.1-4.3c2.8-.3 5.1 1.7 5.1 3.7zm-31.6-5.8c-.7 2 .7 4.3 2.8 5.1c2.3 .7 5.5-.3 6.2-2.3c.7-2-.7-4.3-2.8-5.1c-2.1-.7-5.4 .3-6.2 2.3zm44.2-1.7c-2.8 1.5-3.5 4.9-1.5 7.4c1.5 2.8 5.1 3.7 7.7 2c2.8-1.5 3.5-4.9 1.5-7.4c-1.8-2.8-5.2-3.7-7.7-2zM250.3 8c-137 0-248 111-248 248c0 110.8 71.8 204.8 171.6 237.9c13.3 2.5 17.8-5.8 17.8-12.5c0-6.2-.3-26.8-.3-48.6c-65.8 14.3-81.3-28.6-81.3-28.6c-11.6-29.6-28.3-37.5-28.3-37.5c-23.2-16 1.5-16 1.5-16c25.6 1.7 39.1 26.3 39.1 26.3c22.8 39.1 59.8 27.8 74.5 21.2c2.3-17.1 8.9-27.8 16.2-34.2c-52.5-5.8-108-26.2-108-116.5c0-25.6 9-46.8 23.2-63.2c-2.3-5.8-10.1-29.1 2.3-60.4c0 0 20.3-6.5 66.6 25.3c19.4-5.4 40.3-8.1 61.2-8.1c20.6 0 41.8 2.8 61.2 8.1c46.3-31.8 66.6-25.3 66.6-25.3c12.6 31.3 4.6 54.6 2.3 60.4c14.2 16.4 23.2 37.5 23.2 63.2c0 90.9-55.8 110.6-108.8 116.5c9.2 8.1 17.1 22.8 17.1 46.8c0 34.2-.3 61.7-.3 70.3c0 6.5 4.6 14.7 17.8 12.5C426.5 460.8 496 366.8 496 256C496 119 385 8 248 8z"/>
+                    </svg>
+                    <a href="https://github.com/gaganProgramming" target="_blank" class="text-gray-800 text-sm font-medium">GitHub Profile</a>
+                </div>
+                <div class="contact-card flex flex-col items-center p-6 w-48 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+                  <svg class="w-10 h-10 text-pink-500 mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path d="M224.1 141c-63.6 0-115.1 51.5-115.1 115.1S160.5 371.2 224.1 371.2 339.2 319.6 339.2 256 287.6 141 224.1 141zm0 190.2c-41.5 0-75.1-33.6-75.1-75.1s33.6-75.1 75.1-75.1 75.1 33.6 75.1 75.1-33.6 75.1-75.1 75.1zm146.4-194.3c0 14.3-11.6 25.9-25.9 25.9s-25.9-11.6-25.9-25.9 11.6-25.9 25.9-25.9 25.9 11.6 25.9 25.9zm76.1 27.2c-1.7-35.3-9.9-66.7-36.2-92.9s-57.6-34.5-92.9-36.2c-36.6-2.1-146.6-2.1-183.2 0-35.3 1.7-66.7 9.9-92.9 36.2s-34.5 57.6-36.2 92.9c-2.1 36.6-2.1 146.6 0 183.2 1.7 35.3 9.9 66.7 36.2 92.9s57.6 34.5 92.9 36.2c36.6 2.1 146.6 2.1 183.2 0 35.3-1.7 66.7-9.9 92.9-36.2s34.5-57.6 36.2-92.9c2.1-36.6 2.1-146.6 0-183.2zm-48.4 224c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.6-99.2 8.9-132.9 8.9s-103.5 2.7-132.9-8.9c-19.6-7.8-34.7-22.9-42.5-42.5-11.6-29.4-8.9-99.2-8.9-132.9s-2.7-103.5 8.9-132.9c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.6 99.2-8.9 132.9-8.9s103.5-2.7 132.9 8.9c19.6 7.8 34.7 22.9 42.5 42.5 11.6 29.4 8.9 99.2 8.9 132.9s2.7 103.5-8.9 132.9z"/>
+                  </svg>
+                  <a href="https://www.instagram.com/gaganprogramming/" target="_blank" class="text-pink-600 text-sm font-medium">Instagram Profile</a>
+              </div>
+    
+            </div>
+        </section>
+    
+   
+    
+    
+ <!-- JavaScript for Sliding Functionality -->
+<script>
+  const cardsContainer = document.getElementById('cards-container');
+  const cards = document.querySelectorAll('#cards-container > div');
+  const prevButton = document.getElementById('prevButton');
+  const nextButton = document.getElementById('nextButton');
+  let currentIndex = 0;
+
+  function updateSlide() {
+    const cardWidth = cards[0].offsetWidth + 24; // Adjust for gap between cards
+    const cardsToShow = window.innerWidth < 640 ? 1 : window.innerWidth < 768 ? 2 : 3; // Responsive number of cards
+    const offset = -currentIndex * cardWidth;
+    cardsContainer.style.transform = `translateX(${offset}px)`;
+  }
+
+  prevButton.addEventListener('click', () => {
+    const cardsToShow = window.innerWidth < 640 ? 1 : window.innerWidth < 768 ? 2 : 3;
+    if (currentIndex > 0) {
+      currentIndex -= cardsToShow;
+    } else {
+      currentIndex = Math.max(0, cards.length - cardsToShow); // Wrap around
+    }
+    updateSlide();
+  });
+
+  nextButton.addEventListener('click', () => {
+    const cardsToShow = window.innerWidth < 640 ? 1 : window.innerWidth < 768 ? 2 : 3;
+    if (currentIndex < cards.length - cardsToShow) {
+      currentIndex += cardsToShow;
+    } else {
+      currentIndex = 0; // Wrap around to the start
+    }
+    updateSlide();
+  });
+
+  // Adjust slide on window resize
+  window.addEventListener('resize', updateSlide);
+</script>
+
+
+        
+      <script>
+        // JavaScript for toggling the mobile menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+          const mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+       <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
